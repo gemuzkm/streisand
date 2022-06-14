@@ -1,11 +1,6 @@
-# Streisand
-
-<p align="center">
-<img src="https://raw.githubusercontent.com/jlund/streisand/master/logo.jpg" alt="Automate the effect"/> 
-</p>
-
+# Streisand UPD for UBUNTU 20.04. OpenConnect and Tinyproxy aren't working (you need to say no when installing) but OpenVPN and Shadowsocks and Wireguard are working fine.
 - - -
-[English](README.md), [Français](README-fr.md), [简体中文](README-chs.md), [Русский](README-ru.md) | [Mirror](https://gitlab.com/alimakki/streisand)
+[English](README.md), [Русский](README-ru.md) | [Mirror](https://gitlab.com/alimakki/streisand)
 - - -
 
 [![Build Status](https://github.com/StreisandEffect/streisand/workflows/Streisand/badge.svg)](https://github.com/StreisandEffect/streisand/actions)
@@ -49,7 +44,6 @@ See also:
 * A [more technical list of features](Features.md) 
 * A [more technical list of services](Services.md)
 
-<a id="cloud-providers"></a>
 ## Cloud providers
 * Amazon Web Services (AWS)
 * Microsoft Azure
