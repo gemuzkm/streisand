@@ -1,0 +1,19 @@
+apt update & apt upgrade
+apt install ansible mc htop wget curl net-tools -y
+apt install shadowsocks-libev wireguard -y
+
+sudo systemctl disable systemd-resolved
+sudo systemctl stop systemd-resolved
+sudo unlink /etc/resolv.conf
+echo nameserver 8.8.8.8 | sudo tee /etc/resolv.conf
+sudo apt update
+sudo apt install dnsmasq
+
+cd /root/.gnupg/
+mkdir .gnupg
+mkdir S.dirmngr
+mkdir S.gpg-agent
+
+ssh-keygen
+
+git clone https://github.com/gemuzkm/streisand.git
