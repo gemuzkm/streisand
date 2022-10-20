@@ -17,3 +17,20 @@ mkdir S.gpg-agent
 ssh-keygen
 
 git clone https://github.com/gemuzkm/streisand.git
+
+
+18.04
+ssh-keygen
+sudo apt-get update
+sudo apt-get install git
+sudo apt-get install python-paramiko python-pip python-pycurl python-dev build-essential
+sudo pip install dopy==0.3.5
+sudo pip install --upgrade pip
+sudo pip install ansible markupsafe
+git clone https://github.com/StreisandEffect/streisand.git && cd streisand
+
+
+htpasswd -b -c /etc/nginx/htpasswd веб_логин веб_пароль
+service nginx reload
+
+I also had the same issue on Digital Ocean. I looked at /streisand/playbooks/roles/wireguard/tasks/install.yml and figured that you can comment lines 7 through 13, since now wireguard is part of standard repos. This solved it for me.
