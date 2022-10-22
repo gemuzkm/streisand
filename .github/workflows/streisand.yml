@@ -15,9 +15,10 @@ jobs:
       #max-parallel: 5
       fail-fast: false
       matrix:
+        # 3.5 for older distro's like xenial, and 3.8 to test the latest python
         python-version: [2.7]
         # Test ansible 2.11 and "latest"
-        ansible-version: [">=2.11,<2.12", ">=2.11"]]
+        ansible-version: [">=2.11,<2.12", ">=2.11"]
         env_vars:
           - {RUN: "shellcheck yamlcheck syntax ci", SITE: "global_vars/default-site.yml"}
           - {RUN: "ci", SITE: "tests/site_vars/openconnect.yml"}
