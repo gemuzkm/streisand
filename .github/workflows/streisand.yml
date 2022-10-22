@@ -15,7 +15,6 @@ jobs:
       #max-parallel: 5
       fail-fast: false
       matrix:
-        # 2.7 test the latest python
         python-version: [2.7]
         # Test ansible 2.11 and "latest"
         ansible-version: [">=2.11,<2.12", ">=2.11"]]
