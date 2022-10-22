@@ -18,7 +18,7 @@ jobs:
         # 2.7 test the latest python
         python-version: [2.7]
         # Test ansible 2.11 and "latest"
-        ansible-version: ["2.11"]
+        ansible-version: [">=2.11,<2.12", ">=2.11"]]
         env_vars:
           - {RUN: "shellcheck yamlcheck syntax ci", SITE: "global_vars/default-site.yml"}
           - {RUN: "ci", SITE: "tests/site_vars/openconnect.yml"}
@@ -54,11 +54,9 @@ jobs:
         with:
           fetch-depth: 1
           python-version: ${{ matrix.python-version }}
-      - name: Install additional pip dependencies
+      - name: Install ansible
         run: |
-          python -m pip install --upgrade pip
-          pip install "ansible${{ matrix.ansible-version }}"
-          pip install urllib3 yamllint
+          sudo install ansible
           ansible --version
       - name: Run tests
         env: ${{ matrix.env_vars }}
